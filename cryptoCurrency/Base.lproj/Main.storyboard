@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6tC-kM-Idg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CryptoCurrency-->
+        <scene sceneID="lXi-7D-Hte">
+            <objects>
+                <tableViewController id="uKo-8g-mL9" customClass="FirstViewController" customModule="cryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="QmA-Ho-apE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="75" id="sh0-Eb-mhw" customClass="CryptoTableViewCell" customModule="cryptoCurrency" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sh0-Eb-mhw" id="lo1-Dq-fe0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mge-qc-Zjw">
+                                            <rect key="frame" x="15" y="15" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="45" id="EWM-3r-rtY"/>
+                                                <constraint firstAttribute="height" constant="45" id="iBt-O0-XqL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cryptocurrency Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7A-hh-bWP">
+                                            <rect key="frame" x="85" y="17" width="146" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="905-SE-jUs">
+                                            <rect key="frame" x="85" y="40" width="146" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="a7A-hh-bWP" firstAttribute="leading" secondItem="mge-qc-Zjw" secondAttribute="trailing" constant="25" id="5dR-PC-BE7"/>
+                                        <constraint firstItem="905-SE-jUs" firstAttribute="leading" secondItem="a7A-hh-bWP" secondAttribute="leading" id="6pd-QE-Xy4"/>
+                                        <constraint firstItem="mge-qc-Zjw" firstAttribute="centerY" secondItem="lo1-Dq-fe0" secondAttribute="centerY" id="8g7-ZE-e31"/>
+                                        <constraint firstItem="905-SE-jUs" firstAttribute="trailing" secondItem="a7A-hh-bWP" secondAttribute="trailing" id="DZw-bU-Acq"/>
+                                        <constraint firstItem="mge-qc-Zjw" firstAttribute="leading" secondItem="lo1-Dq-fe0" secondAttribute="leading" constant="15" id="MWG-l2-huN"/>
+                                        <constraint firstAttribute="bottom" secondItem="905-SE-jUs" secondAttribute="bottom" constant="17" id="PNm-5K-1NT"/>
+                                        <constraint firstItem="a7A-hh-bWP" firstAttribute="top" secondItem="lo1-Dq-fe0" secondAttribute="top" constant="17" id="oSC-8j-dFo"/>
+                                        <constraint firstItem="905-SE-jUs" firstAttribute="top" secondItem="a7A-hh-bWP" secondAttribute="bottom" constant="6" id="xVu-Yr-pw9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cryptoNameView" destination="a7A-hh-bWP" id="Qai-7l-Sl9"/>
+                                    <outlet property="cryptoPriceView" destination="905-SE-jUs" id="oS1-nQ-26O"/>
+                                    <outlet property="currentImageView" destination="mge-qc-Zjw" id="FMM-mK-s7t"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uKo-8g-mL9" id="szB-yD-Q9I"/>
+                            <outlet property="delegate" destination="uKo-8g-mL9" id="Ku6-jH-Cbn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="CryptoCurrency" id="ZKQ-Ub-PVk">
+                        <barButtonItem key="backBarButtonItem" title="back" id="IRJ-LL-cRS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableViewReload" destination="QmA-Ho-apE" id="JgZ-Fa-BAf"/>
+                        <segue destination="P0E-j9-jrA" kind="show" identifier="MasterToDetail" id="LLR-XG-WPz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9k-xz-b2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="39.508928571428569"/>
+        </scene>
+        <!--CryptoCurrency-->
+        <scene sceneID="r9r-jQ-NEE">
+            <objects>
+                <viewController id="P0E-j9-jrA" customClass="SecondViewController" customModule="cryptoCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Och-V9-Zd9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Market cap:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zo-cO-OCT">
+                                <rect key="frame" x="20" y="147" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ro-v2-iNx">
+                                <rect key="frame" x="142" y="152" width="200" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price Volume:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5C-wV-yeb">
+                                <rect key="frame" x="20" y="185" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price Change:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkF-Xl-ujm">
+                                <rect key="frame" x="20" y="223" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adO-CB-Q9Y">
+                                <rect key="frame" x="142" y="190" width="200" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3m-0b-lVg">
+                                <rect key="frame" x="181.5" y="98" width="51.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHR-AC-4KV">
+                                <rect key="frame" x="142" y="228" width="200" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b3m-0b-lVg" firstAttribute="top" secondItem="AsZ-AO-b3j" secondAttribute="top" constant="10" id="CWz-GD-yCB"/>
+                            <constraint firstItem="b3m-0b-lVg" firstAttribute="centerX" secondItem="Och-V9-Zd9" secondAttribute="centerX" id="I9T-NU-n5N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AsZ-AO-b3j"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CryptoCurrency" id="NVv-KT-Wyg"/>
+                    <connections>
+                        <outlet property="changeView" destination="XHR-AC-4KV" id="35F-3B-O8T"/>
+                        <outlet property="cryptoName" destination="b3m-0b-lVg" id="hJR-z0-yzy"/>
+                        <outlet property="marketcapView" destination="9Ro-v2-iNx" id="yw0-vh-qvl"/>
+                        <outlet property="priceVolumeView" destination="adO-CB-Q9Y" id="DYq-X4-fX9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laq-sA-KBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814.4927536231885" y="39.508928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H85-Qs-Dcl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6tC-kM-Idg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kIb-wW-mpj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uKo-8g-mL9" kind="relationship" relationship="rootViewController" id="aaP-WR-05r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6t-do-1mn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+</document>
