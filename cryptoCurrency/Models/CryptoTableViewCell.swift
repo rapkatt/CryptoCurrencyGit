@@ -12,7 +12,6 @@ class CryptoTableViewCell: UITableViewCell{
     
     static let shared2 = CryptoTableViewCell()
     
-
     @IBOutlet weak var currentImageView: UIImageView!
     @IBOutlet weak var cryptoNameView: UILabel!
     @IBOutlet weak var cryptoPriceView: UILabel!

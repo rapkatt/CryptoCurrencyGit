@@ -8,5 +8,7 @@ target 'cryptoCurrency' do
   # Pods for cryptoCurrency
 
   pod 'Alamofire'
+  pod 'Charts'
+  pod 'TinyConstraints'
 
 end

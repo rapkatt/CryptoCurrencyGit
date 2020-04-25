@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE31377F2452E43500478264 /* testModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31377E2452E43500478264 /* testModel.swift */; };
+		AE3137812454422C00478264 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3137802454422C00478264 /* Extensions.swift */; };
 		AE45F48A244EF685009EDF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45F489244EF685009EDF85 /* AppDelegate.swift */; };
 		AE45F48C244EF685009EDF85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45F48B244EF685009EDF85 /* SceneDelegate.swift */; };
 		AE45F48E244EF685009EDF85 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45F48D244EF685009EDF85 /* FirstViewController.swift */; };
@@ -25,8 +25,8 @@
 		25C062F3CEAFF9E28833FF11 /* Pods_cryptoCurrency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cryptoCurrency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3794B72EFA3654CCF3CD1B39 /* Pods-cryptoCurrency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoCurrency.debug.xcconfig"; path = "Target Support Files/Pods-cryptoCurrency/Pods-cryptoCurrency.debug.xcconfig"; sourceTree = "<group>"; };
 		404B8DFE7E9D8D4EFC60FF1A /* Pods-cryptoCurrency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cryptoCurrency.release.xcconfig"; path = "Target Support Files/Pods-cryptoCurrency/Pods-cryptoCurrency.release.xcconfig"; sourceTree = "<group>"; };
-		AE31377E2452E43500478264 /* testModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testModel.swift; sourceTree = "<group>"; };
-		AE45F486244EF685009EDF85 /* cryptoCurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cryptoCurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3137802454422C00478264 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AE45F486244EF685009EDF85 /* CryptoCur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE45F489244EF685009EDF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE45F48B244EF685009EDF85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE45F48D244EF685009EDF85 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +61,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AE3137822454423400478264 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE3137802454422C00478264 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AE45F47D244EF684009EDF85 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +82,7 @@
 		AE45F487244EF685009EDF85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE45F486244EF685009EDF85 /* cryptoCurrency.app */,
+				AE45F486244EF685009EDF85 /* CryptoCur.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 				AE45F49D244EF699009EDF85 /* ViewControllers */,
 				AE45F49E244EF6B5009EDF85 /* ServerManager */,
 				AE45F4A1244EFAA6009EDF85 /* Models */,
+				AE3137822454423400478264 /* Extensions */,
 				AE45F48F244EF685009EDF85 /* Main.storyboard */,
 				AE45F492244EF688009EDF85 /* Assets.xcassets */,
 				AE45F494244EF688009EDF85 /* LaunchScreen.storyboard */,
@@ -117,7 +126,6 @@
 			children = (
 				AE45F4A2244F0C0A009EDF85 /* Models.swift */,
 				AE45F4A4244F3065009EDF85 /* CryptoTableViewCell.swift */,
-				AE31377E2452E43500478264 /* testModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,7 +157,7 @@
 			);
 			name = cryptoCurrency;
 			productName = cryptoCurrency;
-			productReference = AE45F486244EF685009EDF85 /* cryptoCurrency.app */;
+			productReference = AE45F486244EF685009EDF85 /* CryptoCur.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -248,7 +256,7 @@
 				AE45F48E244EF685009EDF85 /* FirstViewController.swift in Sources */,
 				AE45F48A244EF685009EDF85 /* AppDelegate.swift in Sources */,
 				AE45F4A5244F3065009EDF85 /* CryptoTableViewCell.swift in Sources */,
-				AE31377F2452E43500478264 /* testModel.swift in Sources */,
+				AE3137812454422C00478264 /* Extensions.swift in Sources */,
 				AE45F4A0244EFA81009EDF85 /* Server.swift in Sources */,
 				AE45F4A7244F376C009EDF85 /* SecondViewController.swift in Sources */,
 				AE45F48C244EF685009EDF85 /* SceneDelegate.swift in Sources */,
@@ -406,7 +414,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.exaple.cryptoCurrency;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CryptoCur;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -426,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.exaple.cryptoCurrency;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CryptoCur;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

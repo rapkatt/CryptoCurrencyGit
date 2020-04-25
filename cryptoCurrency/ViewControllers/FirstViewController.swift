@@ -20,6 +20,17 @@ class FirstViewController: UITableViewController {
         updateNames()
     }
     
+    func updateNames(){
+        Servers.shared.updateCryptoCurrencyInfo(completion: updateCryptoNames)
+    }
+    
+    func updateCryptoNames(info:Welcome){
+        for i in (info.Data!){
+            cryptoNames.append(i)
+            tableViewReload.reloadData()
+        }
+        
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptoNames.count
@@ -31,7 +42,6 @@ class FirstViewController: UITableViewController {
         if cryptoNames.isEmpty {
             return cell
         }
-        
         
         cell.cryptoNameView.text = cryptoNames[indexPath.row].CoinInfo!.FullName!.description
         
@@ -51,6 +61,7 @@ class FirstViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = cryptoNames[indexPath.row]
         performSegue(withIdentifier: "MasterToDetail", sender: data)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -60,18 +71,7 @@ class FirstViewController: UITableViewController {
         }
     }
     
-    func updateNames(){
-        Servers.shared.updateCryptoCurrencyInfo(completion: updateCryptoNames)
-    }
     
-    
-    func updateCryptoNames(info:Welcome){
-        for i in (info.Data!){
-            cryptoNames.append(i)
-            tableViewReload.reloadData()
-        }
-        
-    }
     
 }
 
